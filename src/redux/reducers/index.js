@@ -2,10 +2,10 @@ import { combineReducers } from "redux";
 
 import reducer from "./reducer";
 
-const createRootreducer = () => {
+const createRootReducer = () => {
   return combineReducers({
     reducer,
   });
 };
 
-export default createRootreducer;
+export default createRootReducer;
