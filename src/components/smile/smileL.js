@@ -11,7 +11,6 @@ const StyledSmileL = styled.div`
 
 const StyledBodyL = styled.img`
   border-radius: 50%;
-  background: #fad34f;
 `;
 
 const StyledLeftEyeL = styled.img`

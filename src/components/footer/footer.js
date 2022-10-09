@@ -25,14 +25,15 @@ const StyledSmileContainer3 = styled.div`
 
 const Footer = () => {
   return (
-    <StyledFooter>
-      <StyledSmileContainer2>
-        <SmileL />
-      </StyledSmileContainer2>
-      <StyledSmileContainer3>
-        <SmileS />
-      </StyledSmileContainer3>
-    </StyledFooter>
+    <div>Footer</div>
+    // <StyledFooter>
+    //   <StyledSmileContainer2>
+    //     <SmileL />
+    //   </StyledSmileContainer2>
+    //   <StyledSmileContainer3>
+    //     <SmileS />
+    //   </StyledSmileContainer3>
+    // </StyledFooter>
   );
 }
 

@@ -7,43 +7,45 @@ import Form from "../../components/form/form";
 import Footer from "../../components/footer/footer";
 import Ellipse from '../../images/Ellipse 31.png'
 import Map from "../../components/map/map";
-import SmileS from "../../components/smile/smileS";
-import Smile from "../../components/smile/smile";
-import SmileL from "../../components/smile/smileL";
+import Smilesarea from "../../components/smile/smilesarea";
+import Cloud from "../../components/cloud/cloud";
+import Icons from "../../components/icons/icons";
 
 const GlobalStyle = createGlobalStyle`
-  html {
-    width: 1440px;
-    height: 1128px;
-  }
   body {
     font-family: Apercu Arabic Pro, sans-serif;
-    height: 100%;
-    width: 100%;
+    width: 1440px;
+    height: 1128px;
     margin: 0;
     position: relative;
+    border: 1px solid gray;
+
   }
 `;
+
+
 const StyledFormContainer = styled.div`
   position: absolute;
   left: 147px;
   top: 179px;
+  z-index: 2;
 `;
 
 const StyledFooterContainer = styled.div`
   position: absolute;
   left: 0px;
   top: 928px;
+  box-sizing: content-box;
   width: 100%;
   height: 200px;
   background: #fafafa;
-  border: 1px solid #d8d8d8;
+
 `;
 const StyledMapContainer = styled.div`
   position: absolute;
   left: 814px;
   top: -52px;
-  z-index: 1;
+  z-index: -1;
 `;
 const StyledEllipse = styled.img`
   position: absolute;
@@ -55,24 +57,28 @@ const StyledEllipse = styled.img`
   background: #fad34f;
   opacity: 0.1;
 `;
-const StyledSmileContainer1 = styled.div`
+const StyledSmilesareaContainer = styled.div`
+  width: 100%;
+  height: 100%;
+
+`
+
+const StyledCloudContainer = styled.div`
   position: absolute;
-  left: 29.09px;
-  top: 22.88px
-`;
-const StyledSmileContainer4 = styled.div`
-  position: absolute;
-  left: 763.21px;
-  top: 515.93px;
-  z-index: 3;
-`;
-const StyledSmileContainer5 = styled.div`
-  position: absolute;
-  left: 811.67px;
-  top: 598.15px;
-  z-index: 2;
+  width: 1468.79px;
+  height: 876.72px;
+  left: -92px;
+  top: 101px;
+  z-index: -11;
 `;
 
+const StyledIconsContainer = styled.div`
+  position: absolute;
+  top: 1007px;
+  left: 343px;
+  width: 126.76px;
+  height: 16.09px;
+`;
 
 const Main = () => {
 
@@ -99,15 +105,15 @@ const Main = () => {
       <StyledMapContainer>
         <Map />
       </StyledMapContainer>
-      <StyledSmileContainer1>
-        <SmileS />
-      </StyledSmileContainer1>
-      <StyledSmileContainer4>
-        <Smile />
-      </StyledSmileContainer4>
-      <StyledSmileContainer5>
-        <SmileL />
-      </StyledSmileContainer5>
+      <StyledSmilesareaContainer>
+        <Smilesarea />
+      </StyledSmilesareaContainer>
+      <StyledCloudContainer>
+        <Cloud />
+      </StyledCloudContainer>
+      <StyledIconsContainer>
+        <Icons />
+      </StyledIconsContainer>
     </>
   );
 }

@@ -7,7 +7,6 @@ import { addMessage } from "../../redux/reducers/reducer";
 
 const StyledForm = styled.form`
   display: flex;
-  border: 1px solid #dcdcdc;
   flex-direction: column;
   width: 563px;
   padding: 3px;

@@ -9,13 +9,13 @@ import mouth from "../../images/smile/Vector-3.png";
 const StyledSmile = styled.div`
   width: 100%;
   height: 100%;
-  
+
 `
 
 const StyledBody = styled.img`
   position: relative;
   border-radius: 50%;
-  background: #fad34f;
+  
 `;
 
 const StyledLeftEye = styled.img`
