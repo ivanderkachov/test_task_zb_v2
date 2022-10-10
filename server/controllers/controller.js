@@ -1,5 +1,6 @@
 const messages = require('../data/data')
 
+
 exports.getAll = async (req, res, next) => {
   try {
     const msgs = messages
