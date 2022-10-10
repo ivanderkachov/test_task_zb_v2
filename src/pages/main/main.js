@@ -17,12 +17,17 @@ const GlobalStyle = createGlobalStyle`
     width: 1440px;
     height: 1128px;
     margin: 0;
-    position: relative;
-    border: 1px solid gray;
-
+    padding: 0;
   }
 `;
-
+const StyledWorkSheet = styled.div`
+  width: 1440px;
+  height: 1128px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+`;
 
 const StyledFormContainer = styled.div`
   position: absolute;
@@ -35,16 +40,21 @@ const StyledFooterContainer = styled.div`
   position: absolute;
   left: 0px;
   top: 928px;
-  box-sizing: content-box;
   width: 100%;
   height: 200px;
   background: #fafafa;
-
+  border: none;
+  margin: 0;
+  padding: 0;
 `;
 const StyledMapContainer = styled.div`
   position: absolute;
-  left: 814px;
-  top: -52px;
+  margin: -24px 140px 18px 490px;
+  width: 1606px;
+  height: 970px;
+  left: 324px;
+  top: -20px;
+  overflow: hidden;
   z-index: -1;
 `;
 const StyledEllipse = styled.img`
@@ -95,25 +105,27 @@ const Main = () => {
   return (
     <>
       <GlobalStyle />
-      <StyledFormContainer>
-        <Form toggle={toggle} setToggle={setToggle} />
-      </StyledFormContainer>
-      <StyledFooterContainer>
-        <Footer />
-      </StyledFooterContainer>
-      <StyledEllipse src={Ellipse} alt="Ellipse" />
-      <StyledMapContainer>
-        <Map />
-      </StyledMapContainer>
-      <StyledSmilesareaContainer>
-        <Smilesarea />
-      </StyledSmilesareaContainer>
-      <StyledCloudContainer>
-        <Cloud />
-      </StyledCloudContainer>
-      <StyledIconsContainer>
-        <Icons />
-      </StyledIconsContainer>
+      <StyledWorkSheet>
+        <StyledFormContainer>
+          <Form toggle={toggle} setToggle={setToggle} />
+        </StyledFormContainer>
+        <StyledFooterContainer>
+          <Footer />
+        </StyledFooterContainer>
+        <StyledEllipse src={Ellipse} alt="Ellipse" />
+        <StyledMapContainer>
+          <Map />
+        </StyledMapContainer>
+        <StyledSmilesareaContainer>
+          <Smilesarea />
+        </StyledSmilesareaContainer>
+        <StyledCloudContainer>
+          <Cloud />
+        </StyledCloudContainer>
+        <StyledIconsContainer>
+          <Icons />
+        </StyledIconsContainer>
+      </StyledWorkSheet>
     </>
   );
 }

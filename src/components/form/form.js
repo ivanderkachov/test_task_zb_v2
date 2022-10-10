@@ -23,7 +23,7 @@ const StyledFormInputWrapper = styled.div`
 `;
 const StyledInputName = styled.input`
   background: #ffffff;
-  box-sizing:border-box;
+  box-sizing: border-box;
   border: 1px solid #dcdcdc;
   border-radius: 10px;
   width: 557px;
@@ -35,6 +35,9 @@ const StyledInputName = styled.input`
   font-size: 18px;
   ::placeholder {
     color: #2d2d2d;
+  }
+  :focus {
+    outline: none;
   }
 `;
 
@@ -52,6 +55,9 @@ const StyledInputEmail = styled.input`
   font-size: 18px;
   ::placeholder {
     color: #2d2d2d;
+  }
+  :focus {
+    outline: none;
   }
 `;
 const StyledInputMessage = styled.textarea`
@@ -73,24 +79,31 @@ const StyledInputMessage = styled.textarea`
   ::placeholder {
     color: #2d2d2d;
   }
+  :focus {
+    outline: none;
+  }
 `;
 
 const StyledButton = styled.button`
   width: 218px;
   height: 73px;
-  background: #fad34f;
+  background: rgba(250, 211, 79, 1);
   border: none;
   border-radius: 500px;
   font-weight: 400;
   font-size: 18px;
-
   color: #ffffff;
   margin-top: 12px;
   cursor: pointer;
   :hover {
-    background: #d8d33d;
+    background: rgba(250, 211, 79, 0.5);
   }
 `;
+
+const StyledError = styled.h3`
+  color: red;
+  padding-left: 15px;
+`
 
 const Form = ({ toggle, setToggle }) => {
   const dispatch = useDispatch()
@@ -142,7 +155,7 @@ const Form = ({ toggle, setToggle }) => {
           onChange={onChangeHandler}
         />
       </StyledFormInputWrapper>
-
+      <StyledError>Missing some data</StyledError>
       <StyledButton type="submit" onClick={buttonHandler}>
         Send message
       </StyledButton>
